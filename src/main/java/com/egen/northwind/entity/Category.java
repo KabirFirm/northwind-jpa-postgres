@@ -1,6 +1,7 @@
 package com.egen.northwind.entity;
 
 import lombok.Data;
+
 import javax.persistence.*;
 
 

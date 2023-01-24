@@ -10,7 +10,7 @@ public class Territory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "territory_id",nullable = false)
+    @Column(name = "territory_id")
     private Integer id;
 
     @Column(name = "territory_description", nullable = false)

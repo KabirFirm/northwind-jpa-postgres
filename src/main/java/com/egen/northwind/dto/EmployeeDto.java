@@ -15,8 +15,8 @@ public class EmployeeDto {
     private String firstName;
     private String title;
     private String titleOfCourtesy;
-    private LocalDate birthDate;
-    private LocalDate hireDate;
+    private String birthDate;
+    private String hireDate;
     private String address;
     private String city;
     private String region;

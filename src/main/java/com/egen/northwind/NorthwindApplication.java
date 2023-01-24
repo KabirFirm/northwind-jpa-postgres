@@ -1,7 +1,7 @@
 package com.egen.northwind;
 
-import com.egen.northwind.entity.Category;
-import com.egen.northwind.repository.CategoryRepository;
+import com.egen.northwind.dto.CategoryDto;
+import com.egen.northwind.service.CategoryService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,21 +14,23 @@ public class NorthwindApplication {
 		SpringApplication.run(NorthwindApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner commandLineRunner (CategoryRepository categoryRepository) {
+	/*@Bean
+	CommandLineRunner commandLineRunner (CategoryService categoryService) {
 		return args -> {
 
-			var category1 = new Category();
-			category1.setCategoryName("Acx");
-			category1.setDescription("description");
-			category1.setPicture("picture path");
-			categoryRepository.save(category1);
 
-			categoryRepository.findById(category1.getId())
-					.ifPresent(System.out::println);
+			var category = categoryService.createNewCategory(CategoryDto.builder()
+							.categoryName("cat1")
+							.description("descr")
+					.build());
+
+			System.out.println(categoryService.getCategoryById(category.getId()));
+
+
+
 
 
 		};
-	}
+	}*/
 
 }
