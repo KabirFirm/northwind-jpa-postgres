@@ -3,6 +3,7 @@ package com.egen.northwind.entity;
 import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -65,11 +66,11 @@ public class Employee {
     @Column(name = "photo_path", length = 255)
     private String photoPath;
 
-    /*@OneToMany(mappedBy = "employeeId", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
     private List<Order> orderList;
 
-    @OneToMany(mappedBy = "employeeId", fetch = FetchType.LAZY)
-    private List<EmployeeTerritory> employeeTerritoryList;*/
+    @OneToMany(mappedBy = "employee", fetch = FetchType.LAZY)
+    private List<EmployeeTerritory> employeeTerritoryList;
 
 
 }

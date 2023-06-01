@@ -23,12 +23,18 @@ public class Product {
     @Column(name = "supplier_id", insertable = false, updatable = false)
     private Integer supplierId;
 
+    @Column(name = "company_name", length = 40, nullable = true)
+    private String companyName;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", foreignKey = @ForeignKey(name = "fk_products_category_id"))
     private Category category;
 
     @Column(name = "category_id", insertable = false, updatable = false)
     private Integer categoryId;
+
+    @Column(name = "category_name", length = 15, nullable = true)
+    private String categoryName;
 
     @Column(name = "quantity_per_unit")
     private String quantityPerUnit;
@@ -45,7 +51,7 @@ public class Product {
     @Column(name = "reorder_level")
     private Integer reorderLevel;
 
-    @Column(name = "discontinued", nullable = false)
+    @Column(name = "discontinued", nullable = true)
     private Integer discontinued;
 
 

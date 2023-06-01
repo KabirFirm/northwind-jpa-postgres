@@ -3,6 +3,7 @@ package com.egen.northwind.entity;
 import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -14,8 +15,8 @@ public class Order {
     @Column(name = "order_id")
     private Integer id;
 
-//    @OneToMany(mappedBy = "orderId", fetch = FetchType.LAZY)
-//    private List<OrderDetail> orderDetailList;
+    @OneToMany(mappedBy = "orderId", fetch = FetchType.LAZY)
+    private List<OrderDetail> orderDetailList;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", foreignKey = @ForeignKey(name = "fk_orders_customer_id"))

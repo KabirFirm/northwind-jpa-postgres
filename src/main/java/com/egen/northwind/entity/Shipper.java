@@ -2,6 +2,7 @@ package com.egen.northwind.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -13,8 +14,8 @@ public class Shipper {
     @Column(name = "shipper_id", nullable = false)
     private Integer id;
 
-//    @OneToMany(mappedBy = "shipVia", fetch = FetchType.LAZY)
-//    private List<Order> orderList;
+    @OneToMany(mappedBy = "shipper", fetch = FetchType.LAZY)
+    private List<Order> orderList;
 
     @Column(name = "company_name", length = 40, nullable = false)
     private String company_name;

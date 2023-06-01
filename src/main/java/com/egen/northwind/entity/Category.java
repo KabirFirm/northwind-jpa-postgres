@@ -3,6 +3,7 @@ package com.egen.northwind.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -24,6 +25,6 @@ public class Category {
     @Column(name = "picture")
     private String picture;
 
-//    @OneToMany(mappedBy = "categoryId",fetch = FetchType.LAZY)
-//    private List<Product> productList;
+    @OneToMany(mappedBy = "category",fetch = FetchType.LAZY)
+    private List<Product> productList;
 }

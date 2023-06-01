@@ -2,6 +2,7 @@ package com.egen.northwind.entity;
 
 import lombok.Data;
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -16,6 +17,6 @@ public class Region {
     @Column(name = "region_description", nullable = false)
     private String regionDescription;
 
-//    @OneToMany(mappedBy = "regionId", fetch = FetchType.LAZY)
-//    private List<Territory> territoryList;
+    @OneToMany(mappedBy = "region", fetch = FetchType.LAZY)
+    private List<Territory> territoryList;
 }
