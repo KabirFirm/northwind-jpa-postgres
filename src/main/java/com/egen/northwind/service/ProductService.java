@@ -64,7 +64,7 @@ public class ProductService {
         productRepository.findById(id)
                 .ifPresent(itm -> {
                     BeanUtils.copyProperties(productDto, itm);
-                    supplierRepository.findById(productDto.getSupplierId()).ifPresent(suu;o);
+                    //supplierRepository.findById(productDto.getSupplierId()).ifPresent();
 
                     productRepository.save(itm);
 
