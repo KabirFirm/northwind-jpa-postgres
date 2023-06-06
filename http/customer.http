@@ -1,0 +1,25 @@
+#####
+POST http://localhost:8080/api/v1/customers
+Content-Type: application/json
+
+{
+  "loadingMode": false,
+  "updateMode": false,
+  "size": 10,
+  "id": null,
+  "companyName": "Ana Trujillo Emparedados y helados",
+  "contactName": "Ana Trujillo",
+  "contactTitle": "Owner",
+  "address": "Avda. de la Constitución 2222",
+  "city": "México D.F.",
+  "region": null,
+  "postalCode": "05021",
+  "country": "Mexico",
+  "phone": "(5) 555-3932",
+  "fax": "030-0076545",
+  "page": null
+}
+
+#####
+GET http://localhost:8080/api/v1/customers
+Content-Type: application/json

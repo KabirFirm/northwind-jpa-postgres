@@ -1,0 +1,27 @@
+#####
+POST http://localhost:8080/api/v1/employees
+Content-Type: application/json
+
+{
+  "lastName":"Fuller",
+  "firstName":"Andrew",
+  "title":"Vice President, Sales",
+  "titleOfCourtesy":"Dr.",
+  "birthDate":"1952-02-19",
+  "hireDate":"1992-08-14",
+  "address":"908 W. Capital Way",
+  "city":"Tacoma",
+  "region":"WA",
+  "postalCode":"98401",
+  "country":"USA",
+  "homePhone":"(206) 555-9482",
+  "extension":"3457",
+  "photo":"photo",
+  "notes":"Andrew received his BTS commercial in 1974 and a Ph.D. in international m",
+  "reportsTo":"",
+  "photoPath":"http://accweb/emmployees/fuller.bmp"
+}
+
+#####
+GET http://localhost:8080/api/v1/employees
+Content-Type: application/json
