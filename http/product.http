@@ -1,0 +1,23 @@
+#####
+POST http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+  "customerId":"2",
+  "employeeId":"6",
+  "orderDate":"1992-08-14",
+  "required_date":"1992-08-25",
+  "shippedDate":"1992-08-16",
+  "shipVia":"1",
+  "freight":"32.3800011",
+  "shipName":"Vins et alcools Chevalier",
+  "shipAddress":"59 rue de l''Abbaye",
+  "shipCity":"Reims",
+  "shipRegion": null,
+  "shipPostalCode":"51100",
+  "shipCountry":"France"
+}
+
+#####
+GET http://localhost:8080/api/v1/products
+Content-Type: application/json
