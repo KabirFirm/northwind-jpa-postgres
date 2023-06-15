@@ -63,4 +63,14 @@ public class TerritoryController {
             throw new RuntimeException("There is no data");
         }
     }
+
+    @GetMapping("/with-employee-territory")
+    public ResponseEntity<?> getTerritoryWithEmployeeTerritoryList() {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(territoryService.getTerritoryWithEmployeeTerritoryList());
+        }catch (Exception e) {
+            log.error("{}", e.getMessage());
+            throw new RuntimeException("There is no data");
+        }
+    }
 }

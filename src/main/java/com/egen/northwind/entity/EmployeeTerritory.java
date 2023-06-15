@@ -1,5 +1,7 @@
 package com.egen.northwind.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import javax.persistence.*;
 
@@ -18,7 +20,6 @@ public class EmployeeTerritory {
 
     @Column(name = "employee_id", insertable = false, updatable = false)
     private Integer employeeId;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "territory_id", foreignKey = @ForeignKey(name = "fk_employee_territories_territory_id"))
     private Territory territory;

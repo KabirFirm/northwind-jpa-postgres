@@ -35,4 +35,14 @@ public class EmployeeTerritoryController {
             return ResponseEntity.internalServerError().body("Error!!!");
         }
     }
+
+    @GetMapping("/with-territory")
+    public ResponseEntity<?> getEmployeeTerritoryWithTerritory() {
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(employeeTerritoryService.getEmployeeTerritoryWithTerritory());
+        }catch (Exception e) {
+            log.error("{}", e.getMessage());
+            throw new RuntimeException("There is no data");
+        }
+    }
 }
